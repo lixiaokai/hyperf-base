@@ -1,16 +1,16 @@
 <?php
 
 $header = <<<'EOF'
-This file is part of Hyperf.
+本软件和相关文档仅限 xxx 或其附属公司开发团队内部交流使用.
 
 @link     https://www.hyperf.io
+@api      https://www.apifox.cn
 @document https://hyperf.wiki
-@contact  group@hyperf.io
-@license  https://github.com/hyperf/hyperf/blob/master/LICENSE
 EOF;
 
 return (new PhpCsFixer\Config())
     ->setRiskyAllowed(true)
+    // 内置规则 @link https://github.com/FriendsOfPHP/PHP-CS-Fixer/blob/master/doc/rules/index.rst
     ->setRules([
         '@PSR2' => true,
         '@Symfony' => true,
@@ -23,13 +23,13 @@ return (new PhpCsFixer\Config())
             'location' => 'after_declare_strict',
         ],
         'array_syntax' => [
-            'syntax' => 'short'
+            'syntax' => 'short',
         ],
         'list_syntax' => [
-            'syntax' => 'short'
+            'syntax' => 'short',
         ],
         'concat_space' => [
-            'spacing' => 'one'
+            'spacing' => 'one',
         ],
         'blank_line_before_statement' => [
             'statements' => [
@@ -38,7 +38,7 @@ return (new PhpCsFixer\Config())
         ],
         'general_phpdoc_annotation_remove' => [
             'annotations' => [
-                'author'
+                'author',
             ],
         ],
         'ordered_imports' => [
@@ -57,7 +57,7 @@ return (new PhpCsFixer\Config())
             'identical' => false,
         ],
         'phpdoc_align' => [
-            'align' => 'left',
+            'align' => 'vertical', // 对行注释对齐方式
         ],
         'multiline_whitespace_before_semicolons' => [
             'strategy' => 'no_multi_line',

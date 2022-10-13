@@ -1,11 +1,6 @@
 <?php
 
 $header = <<<'EOF'
-本软件和相关文档仅限 xxx 或其附属公司开发团队内部交流使用.
-
-@link     https://www.hyperf.io
-@api      https://www.apifox.cn
-@document https://hyperf.wiki
 EOF;
 
 return (new PhpCsFixer\Config())

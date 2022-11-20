@@ -3,6 +3,8 @@
 declare(strict_types=1);
 
 /**
+ * PhpCsFixer.
+ *
  * @see https://github.com/FriendsOfPHP/PHP-CS-Fixer/blob/master/doc/rules/index.rst 内置规则
  */
 

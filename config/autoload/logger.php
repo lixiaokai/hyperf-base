@@ -1,13 +1,11 @@
 <?php
 
 declare(strict_types=1);
+
 /**
- * This file is part of Hyperf.
+ * 日志 - 配置文件.
  *
- * @link     https://www.hyperf.io
- * @document https://hyperf.wiki
- * @contact  group@hyperf.io
- * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
+ * @see https://hyperf.wiki/2.2/#/zh-cn/logger
  */
 return [
     'default' => [

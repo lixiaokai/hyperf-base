@@ -3,29 +3,53 @@
 基于 Hyperf 的骨架基础库
 
 # 环境要求
- - PHP >= 8.0
- - Swoole PHP extension >= 4.5，and Disabled `Short Name`
-   - php.ini 配置文件增加 1 行 `swoole.use_shortname="Off"`
- - OpenSSL PHP extension
- - JSON PHP extension
- - PDO PHP extension
- - Redis PHP extension
+ - php >= 7.4
+ - ext-swoole >= 4.5 ( php.ini swoole.use_shortname=Off )
+ - ext-json
+ - ext-openssl
+ - ext-pdo
+ - ext-pdo_mysql
+ - ext-redis
+ - ext-xlswriter ( 导入、导出 excel )
  
 # 安装或更新依赖
 
 ```
-# 安装依赖 ( 也可以运行更新依赖来安装 )
+# 安装依赖 ( 也可以运行 composer update -o 更新依赖来安装 )
 composer install
+
 # 更新依赖
 composer update -o
 ```
+
+# PhpStorm 推荐配置
+
+## 1. runtime 目录设为排除目录
+在左侧项目目录中选择 runtime 文件 > 鼠标右键 > Mark Directory as > Excluded
+
+## 2. .php-cs-fixer.php 配置
+
+设置中搜索 `php-cs-fixer`，并配置上，使得团队代码风格统一，且支持简单的质量检查
+
+## 3. 推荐安装插件 ( Plugins )
+
+- .env files support
+- Hyperf
+- PHP Annotations
+
 
 # 常用命令
 
 ## 运行项目
 ```
-# 开发模式 ( 热更新模式 )
+# 开发环境 ( 热更新模式 )
 composer dev
+
+# 生产环境
+composer start
+
+# kill 进程
+composer kill
 ```
 
 ## 发布配置

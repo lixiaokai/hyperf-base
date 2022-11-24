@@ -1,21 +1,22 @@
 <?php
 
 declare(strict_types=1);
+
 /**
- * This file is part of Hyperf.
+ * 热更新 - 配置文件.
  *
- * @link     https://www.hyperf.io
- * @document https://hyperf.wiki
- * @contact  group@hyperf.io
- * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
+ * 不足：
+ * 1. 删除文件和修改 .env 需要手动重启才能生效
+ * 2. vendor 中的文件需要使用 classmap 形式自动加载才能被扫描 ( 即执行 composer dump-autoload -o )
  */
+
 use Hyperf\Watcher\Driver\ScanFileDriver;
 
 return [
     'driver' => ScanFileDriver::class,
     'bin' => 'php',
     'watch' => [
-        'dir' => ['app', 'config'],
+        'dir' => ['app', 'common', 'demo', 'config', 'vendor'],
         'file' => ['.env'],
         'scan_interval' => 2000,
     ],

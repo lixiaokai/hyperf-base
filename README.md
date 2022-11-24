@@ -37,6 +37,11 @@ composer update -o
 - Hyperf
 - PHP Annotations
 
+# 目录说明
+
+- app - 通用目录
+- common - 公共资源目录
+- demo - 示例目录
 
 # 常用命令
 
@@ -63,4 +68,14 @@ php bin/hyperf.php vendor:publish hyperf/async-queue
 ```
 # 后面的名称首字母建议用大写，因为是创建同名文件
 php bin/hyperf.php gen:job DemoJob
+```
+
+# 其他
+
+## 根目录增加 php 相关文件夹时需要修改的地方
+
+```
+1. composer.json                   // 增加自动加载目录
+2. config/autoload/watcher.php     // 增加热更新目录
+3. config/autoload/annotations.php // 增加注解扫描目录
 ```

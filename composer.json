@@ -47,7 +47,8 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "app/"
+            "App\\": "app/",
+            "Demo\\": "demo/"
         },
         "files": []
     },
@@ -78,6 +79,6 @@
             "php ./bin/hyperf.php start"
         ],
         "dev": "composer dump-autoload -o && php ./bin/hyperf.php server:watch",
-        "kill": "lsof -i :9501 | grep php  | awk '{print $2}' | xargs -l kill -9"
+        "kill": "kill -QUIT $(lsof -i:9501 | grep LISTEN | awk '{print $2}')"
     }
 }

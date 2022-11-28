@@ -1,0 +1,14 @@
+p, role:1, dom:1, /demo, get
+p, role:1, dom:1, /demo, post
+p, role:1, dom:1, /demo/{id}, get
+p, role:1, dom:1, /demo/{id}, put
+p, role:1, dom:1, /demo/{id}, delete
+p, role:1, dom:2, /demo, get
+p, role:1, dom:2, /demo, post
+p, role:1, dom:2, /demo/{id}, get
+p, role:1, dom:2, /demo/{id}, put
+p, role:1, dom:2, /demo/{id}, delete
+p, role:2, dom:2, /*, get|post|put|delete
+g, user:2, role:1, dom:1
+g, user:3, role:1, dom:2
+g, user:4, role:2, dom:2
